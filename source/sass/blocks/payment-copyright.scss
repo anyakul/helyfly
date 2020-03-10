@@ -1,0 +1,41 @@
+.payment-copyright {
+  background-color: $light-yellow-color;
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+
+.payment-copyright__wrapper {
+  @include page-width;
+}
+
+.payment-copyright__column {
+  @include flex-row-space;
+  width: 50%;
+  margin-left: 6%;
+}
+
+.payment-copyright__wrapper {
+  @include page-width;
+  @include flex-row-space;
+}
+
+.payment-copyright__payment-list {
+  @include cancel-list;
+  @include flex-row-space;
+}
+
+.payment-copyright__payment-item {
+  margin-right: 20px;
+}
+
+.payment-copyright__copyright {
+  text-align: center;
+}
+
+.payment-copyright__copyright-text {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: $light-grey-color;
+}

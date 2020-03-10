@@ -1,0 +1,203 @@
+.manager {
+  @include page-width;
+  @include flex-row;
+  align-items: top;
+  border-top: 1px solid $grey-color;
+  padding-top: 35px;
+  padding-bottom: 54px;
+  border-bottom: 1px solid $grey-color;
+  margin-bottom: 46px;
+}
+
+.manager__column {
+  width: 50%;
+  margin-right: 13%;
+}
+
+.manager__header {
+  font-family: $montserrat-regular;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 14px;
+  color: $black-color;
+}
+
+.manager__about-manager {
+  margin-bottom: 40px;
+}
+
+.manager__text {
+  font-family: $montserrat-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-color;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.manager__text br {
+  display: none;
+}
+
+.manager__button {
+  @include blue-color-button;
+}
+
+.manager__person {
+  padding-top: 33px;
+  text-align: center;
+  position: relative;
+
+  &:before {
+    content: "";
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 22px;
+    right: 12px;
+    width: 31px;
+    height: 27px;
+    background-image: url("../img/icon-heart.svg");
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.manager__person-image {
+  margin-bottom: 20px;
+}
+
+.manager__person-button {
+  @include blue-color-button;
+  width: 62%;
+  font-size: 14px;
+}
+
+.manager__person-image {
+  width: 140px;
+  height: 140px;
+}
+
+.manager__person-name {
+  font-family: $montserrat-regular;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.manager__person-profession {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+line-height: 21px;
+}
+
+@media (max-width: $tablet-width) {
+  .manager {
+    @include page-width;
+    @include flex-column;
+    align-items: top;
+    border-top: none;
+    padding-top: 0;
+    padding-bottom: 17px;
+    border-bottom: 1px solid $grey-color;
+    margin-bottom: 20px;
+  }
+  
+  .manager__text br {
+  display: block;
+}
+
+  .manager__column {
+    width: 100%;
+    margin-right: 0;
+    order: 2;
+  }
+  
+  
+.manager__person-image {
+  width: 123px;
+  height: 136px;
+}
+
+  .manager__header {
+    font-family: $montserrat-regular;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    color: $black-color;
+  }
+
+  .manager__about-manager {
+    margin-bottom: 25px;
+  }
+
+  .manager__text {
+    font-family: $montserrat-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .manager__text-block {
+    margin-bottom: 18px;
+  }
+
+  .manager__button {
+    @include blue-color-button;
+  }
+
+  .manager__person {
+    padding-top: 33px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 14px;
+
+    &:before {
+      content: "";
+      background-size: 100%;
+      background-repeat: no-repeat;
+      top: 22px;
+      right: 0;
+      width: 31px;
+      height: 27px;
+      background-image: url("../img/icon-heart.svg");
+      position: absolute;
+      z-index: 5;
+    }
+  }
+
+  .manager__person-image {
+    margin-bottom: 20px;
+  }
+
+  .manager__person-button {
+    @include blue-color-button;
+    width: 77%;
+    font-size: 14px;
+  }
+
+  .manager__person-name {
+    font-family: $montserrat-regular;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .manager__person-profession {
+    font-family: $montserrat-regular;
+    font-size: 14px;
+  line-height: 22px;
+  }
+}

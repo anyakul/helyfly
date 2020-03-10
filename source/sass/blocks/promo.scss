@@ -1,0 +1,126 @@
+.promo {
+  background-image: url("../img/helimain@1x.png");
+  padding-top: 286px;
+  padding-bottom: 280px;
+  margin-bottom: 65px;
+  min-height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.promo__wrapper {
+  @include page-width;
+}
+
+.promo__header {
+  @include big-white-title;
+  margin-bottom: 20px;
+  width: 79%;
+}
+
+.promo__span {
+  color: $orange-color;
+}
+
+.promo__price {
+  color: $white-color;
+  padding: 13px 21px;
+  width: 184px;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 37px;
+  background-image: url("../img/icon-price-bg.svg");
+  background-size: cover;
+
+  &:after {
+    content: "";
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 6px;
+    right: 13px;
+    width: 82px;
+    height: 82px;
+    background-image: url("../img/icon-percent.svg");
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.promo__price-header {
+  font-size: 20px;
+  letter-spacing: 1.1px;
+}
+
+.promo__price-number {
+  font-family: $montserrat-bold;
+  font-size: 35px;
+  letter-spacing: 1.1px;
+}
+
+.promo__button {
+  @include white-border-button;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    background-image: url("../img/helimain@1x.png");
+    padding-top: 138px;
+    padding-bottom: 177px;
+    margin-bottom: 37px;
+    min-height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .promo__wrapper {
+    @include page-width;
+  }
+
+  .promo__header {
+    @include big-white-title;
+    margin-bottom: 32px;
+    width: 84%;
+  }
+  
+  .promo__header br {
+    display: none;
+  }
+
+
+  .promo__span {
+    color: $orange-color;
+  }
+
+  .promo__price {
+    width: 162px;
+    margin-bottom: 47px;
+    background-image: url("../img/icon-price-bg.svg");
+    padding: 11px 19px;
+
+    &:after {
+      right: 0;
+      width: 76px;
+    }
+  }
+
+  .promo__price-header {
+    font-size: 16px;
+    letter-spacing: 1.1px;
+  }
+
+  .promo__price-number {
+    font-family: $montserrat-bold;
+    font-size: 28px;
+    letter-spacing: 1.1px;
+  }
+
+  .promo__button {
+    @include white-border-button;
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+}

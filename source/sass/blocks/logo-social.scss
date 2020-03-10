@@ -1,0 +1,44 @@
+.logo-social {
+@include page-width;
+  @include flex-row-space;
+  width: 1009px;
+  margin: 0 24%;
+  margin-bottom: 40px;
+}
+
+.logo-social__list {
+  @include flex-row-space;
+}
+
+.logo-social__social-list {
+  @include flex-row-space;
+  @include cancel-list;
+}
+
+.logo-social__social-item {
+  margin-right: 30px;
+}
+
+.logo-social__language {
+  background-color: transparent;
+  border: 0 none;
+ // color: $white-color;
+  appearance: none;
+  background-image: url("../img/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: 33px 5px;
+  width: 45px;
+  font-family: $montserrat-regular;
+  font-size: 15px;
+  line-height: 18px;
+  color: #37373F;
+  text-transform: uppercase;
+}
+/*
+.login__language-select option {
+  background-color: $light-purple-color;
+  border: 0 none;
+  color: $white-color;
+  appearance: none;
+}
+*/

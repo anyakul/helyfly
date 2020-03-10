@@ -1,0 +1,101 @@
+@mixin page-width {
+  width: 91%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ // flex-wrap: wrap;
+}
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row-space {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+}
+
+@mixin flex-row-space-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin flex-row-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin cancel-list {
+  list-style: none;
+}
+
+@mixin blue-color-button {
+  background-color: transparent;
+  border: none;
+  font-family: $montserrat-regular;
+  font-size: 17px;
+  line-height: 25px;
+  position: relative;
+  color: $blue-color;
+}
+
+@mixin text {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 17px;
+  color: $grey-color;
+}
+
+@mixin big-white-title {
+  font-family: $montserrat-bold;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: $white-color;
+  @media (max-width: $tablet-width) {
+    font-size: 37px;
+  }
+  
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@mixin white-border-button {
+  font-family: $montserrat-bold;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  color: $white-color;
+  border: 1px solid $white-color;
+  padding: 21px 33px;
+  
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    padding: 21px 41px;
+  }
+}
