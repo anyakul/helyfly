@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Helyfly</title>
   <link rel="stylesheet" href="css/style.min.css">
- <!--<style>
+  <!-- <style>
     HTML {
     opacity: 0.5;
       background-repeat: no-repeat;
@@ -14,8 +14,7 @@
       background-image: url( "img/DESK PAGE.jpg" );
      // position: absolute;
    z-index: 10;
-   
-    }
+   }
     /* mobile */
     @media ( max-width: 767px ) {
       HTML {
@@ -23,17 +22,21 @@
       }
     }
     </style>-->
-</head><body>
+</head>
+<body>
   <header class="header">
     <section class="header__wrapper">
       <a href="#" class="header__logo">
-        <img class="header__logo-icon" src="img/icon-logo.svg" alt="suka">
+        <img class="header__logo-icon" src="img/icon-logo.svg" alt="helyfly">
       </a>
       <p class="header__phone">
-        Телефон: <span class="header__number">8(800)-123-12-12</span>
+        Телефон:
+        <span class="header__number">8(800)-123-12-12</span>
       </p>
       <p class="header__city">Москва</p>
-      <a class="header__avatar"><img class="header__icon" src="img/icon-login.svg" alt="login"></a>
+      <a class="header__avatar" href="#">
+        <img class="header__icon" src="img/icon-login.svg" alt="login">
+      </a>
     </section>
   </header>
   <main class="main">
@@ -51,45 +54,132 @@
       <div class="photo-in-helicopter__wrapper">
         <div class="photo-in-helicopter__column">
           <h1 class="photo-in-helicopter__header">Фотосессия<br> в вертолете</h1>
-          <img class="photo-in-helicopter__image photo-in-helicopter__image--mobile" src="img/photo-in-helicopter@1x.png" alt="login">
-          <p class="photo-in-helicopter__text">Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф 
-            запечатлит лучшие моменты</p>
+          <picture>
+            <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
+            <img class="photo-in-helicopter__image photo-in-helicopter__image--mobile" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="photo-in-helicopter">
+          </picture>
+          <p class="photo-in-helicopter__text">
+            Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
+          </p>
           <ul class="photo-in-helicopter__list">
-            <li class="photo-in-helicopter__item"><img class="photo-in-helicopter__icon" src="img/icon-hours-desktop.svg" alt="City of Sedona">3 часа съёмки</li>
-            <li class="photo-in-helicopter__item photo-in-helicopter__item--language"><img class="photo-in-helicopter__icon" src="img/icon-chat.svg" width="35px" alt="login">Русский</li>
-            <li class="photo-in-helicopter__item photo-in-helicopter__item--price"><img class="photo-in-helicopter__icon" src="img/icon-money.svg" width="35px" alt="login">от 850$</li>
-            <li class="photo-in-helicopter__item photo-in-helicopter__item--photos"><img class="photo-in-helicopter__icon" src="img/icon-photo.svg" width="35px" alt="login">Более 50 фотографий</li>
-            <li class="photo-in-helicopter__item photo-in-helicopter__item--city"><img class="photo-in-helicopter__icon" src="img/icon-place.svg" width="35px" alt="login">Москва</li>
-            <li class="photo-in-helicopter__item photo-in-helicopter__item--question"><img class="photo-in-helicopter__icon" src="img/icon-chat.svg" width="35px" alt="login">Готовы ответить на любые вопросы</li>
+            <li class="photo-in-helicopter__item">
+              <picture>
+                <img class="photo-in-helicopter__icon" src="img/icon-hours@1x.png" srcset="img/icon-hours@1x.png 1x, img/icon-hours@2x.png 2x" alt="hours">
+              </picture>
+              3 часа съёмки
+            </li>
+            <li class="photo-in-helicopter__item">
+              <picture>
+                <img class="photo-in-helicopter__icon" src="img/icon-photo@1x.png" srcset="img/icon-photo@1x.png 1x, img/icon-photo@2x.png 2x" alt="hours">
+              </picture>
+              Более 50 фотографий
+            </li>
+            <li class="photo-in-helicopter__item">
+              <picture>
+                <img class="photo-in-helicopter__icon" src="img/icon-place@1x.png" srcset="img/icon-place@1x.png 1x, img/icon-place@2x.png 2x" alt="hours">
+              </picture>
+              Москва
+            </li>
+            <li class="photo-in-helicopter__item">
+              <picture>
+                <img class="photo-in-helicopter__icon" src="img/icon-chat@1x.png" srcset="img/icon-chat@1x.png 1x, img/icon-chat@2x.png 2x" alt="chat">
+              </picture>
+              Готовы ответить на любые вопросы
+            </li>
           </ul>
         </div>
-        <img class="photo-in-helicopter__image photo-in-helicopter__image--desktop" src="img/photo-in-helicopter@1x.png" alt="login">
+        <picture>
+          <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
+          <img class="photo-in-helicopter__image photo-in-helicopter__image--desktop" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="photo-in-helicopter">
+        </picture>
       </div>
       <div class="photo-in-helicopter__item-rating">
-        <img class="photo-in-helicopter__icon-cup" src="img/icon-cup.svg" alt="login">
+        <picture>
+          <img class="photo-in-helicopter__icon photo-in-helicopter__icon--cup" src="img/icon-chat@1x.png" srcset="img/icon-cup@1x.png 1x, img/icon-cup@2x.png 2x" alt="cup">
+        </picture>
         <div class="photo-in-helicopter__stars">
           <p class="photo-in-helicopter__stars-text">Более 50 отзывов с оценкой</p>
-          <div class="photo-in-helicopter__stars-group">
-            <img class="photo-in-helicopter__icon-star" src="img/icon-star.svg" alt="login">
-            <img class="photo-in-helicopter__icon-star" src="img/icon-star.svg" alt="login">
-            <img class="photo-in-helicopter__icon-star" src="img/icon-star.svg" alt="login">
-            <img class="photo-in-helicopter__icon-star" src="img/icon-star.svg" alt="login">
-            <img class="photo-in-helicopter__icon-star" src="img/icon-star.svg" alt="login">
-          </div>
+          <ul class="photo-in-helicopter__stars-group">
+            <li class="photo-in-helicopter__icon-star">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="photo-in-helicopter__icon-star">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="photo-in-helicopter__icon-star">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="photo-in-helicopter__icon-star">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="photo-in-helicopter__icon-star">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
     <section class="photos">
       <h2 class="photos__header">Фотографии проекта:</h2>
       <ul class="photos__list">
-        <li class="photos__item"><img class="photos__image" src="img/photo-pilot@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-from-cabin@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-in-helicopter@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-with-helikopter@1x.png" width="100%" height="185px" "="" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-in-helicopter@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-with-helikopter@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-from-cabin@1x.png" width="100%" height="185px" alt="login"></li>
-        <li class="photos__item"><img class="photos__image" src="img/photo-in-helicopter@1x.png" width="100%" height="185px" alt="login"></li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-pilot@1x.webp 1x, img/photo-pilot@2x.webp 2x">
+            <img class="photos__image" src="img/photo-pilot@1x.png" srcset="img/photo-pilot@1x.png 1x, img/photo-pilot@2x.png 2x" alt="pilot">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-from-cabin@1x.webp 1x, img/photo-from-cabin@2x.webp 2x">
+            <img class="photos__image" src="img/photo-from-cabin@1x.png" srcset="img/photo-from-cabin@1x.png 1x, img/photo-from-cabin@2x.png 2x" alt="from-cabin">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
+            <img class="photos__image" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="in-helicopter">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-with-helikopter@1x.webp 1x, img/photo-with-helikopter@2x.webp 2x">
+            <img class="photos__image" src="img/photo-with-helikopter@1x.png" srcset="img/photo-with-helikopter@1x.png 1x, img/photo-with-helikopter@2x.png 2x" alt="with-helikopter">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
+            <img class="photos__image" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="in-helicopter">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-with-helikopter@1x.webp 1x, img/photo-with-helikopter@2x.webp 2x">
+            <img class="photos__image" src="img/photo-with-helikopter@1x.png" srcset="img/photo-with-helikopter@1x.png 1x, img/photo-with-helikopter@2x.png 2x" alt="with-helikopter">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-from-cabin@1x.webp 1x, img/photo-from-cabin@2x.webp 2x">
+            <img class="photos__image" src="img/photo-from-cabin@1x.png" srcset="img/photo-from-cabin@1x.png 1x, img/photo-from-cabin@2x.png 2x" alt="from-cabin">
+          </picture>
+        </li>
+        <li class="photos__item">
+          <picture>
+            <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
+            <img class="photos__image" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="in-helicopter">
+          </picture>
+        </li>
       </ul>
       <button class="photos__button">Показать все фото</button>
     </section>
@@ -98,10 +188,10 @@
         <div class="manager__about-manager">
           <div class="manager__text-block">
             <h2 class="manager__header">Об организаторе:</h2>
-            <p class="manager__text">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь членом группы экспертов туристической отрасли, которые хорошо 
+            <p class="manager__text">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь членом группы экспертов туристической отрасли, которые хорошо
               разбираются в маркетинге, операциях и услугах обслуживания клиентов, специализирующихся на совместном использовании и частных турах.</p>
-            <p class="manager__text">Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое соответствует 
-              бюджету и планам клиента.<br> Мы никогда не зависим от субпоставщиков<br> и не свяжемся…</p>
+            <p class="manager__text">Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое соответствует
+              бюджету и планам клиента.<br> Мы никогда не зависим от субпоставщиков и не свяжемся…</p>
           </div>
           <button class="manager__button">Читать еще</button>
         </div>
@@ -110,12 +200,15 @@
             <h2 class="manager__header">Что я предоставлю:</h2>
             <p class="manager__text">Встречу вас на машине после длительного перелёта. Качественный подбор места и локации для вашей съемки. <br>
               При необходимости всегда возможно прерваться на обед/ужин. Более 50 фотографий на выходе с обработкой и замечательные впечатления о Дубае !</p>
-            </div>
-            <button class="manager__button">Читать еще</button>
+          </div>
+          <button class="manager__button">Читать еще</button>
         </div>
       </div>
       <div class="manager__person">
-        <img class="manager__person-image" src="img/person-photograph@1x.png" width="140" height="140" alt="login">
+        <picture>
+          <source type="image/webp" srcset="img/photo-photograph@1x.webp 1x, img/photo-photograph@2x.webp 2x">
+          <img class="manager__person-image" src="img/photo-photograph@1x.png" srcset="img/photo-photograph@1x.png 1x, img/photo-photograph@2x.png 2x" alt="photograph">
+        </picture>
         <p class="manager__person-name">Марина Иванова</p>
         <p class="manager__person-profession">Фотограф</p>
         <button class="manager__person-button">Показать больше информации о фотографе</button>
@@ -125,14 +218,18 @@
       <h2 class="available-time__header">Доступная съемка <br>в ближайшее время:</h2>
       <ul class="available-time__list">
         <li class="available-time__item available-time__item--date">
-          <p class="available-time__item-time">Пятница, 14 сентября</p>
+          <span class="available-time__item-time-text">Пятница, 14 сентября</span>
+          <button class="available-time__button-calender">
+            <img class="available-time__icon" src="img/icon-calender.svg" alt="calender">
+            <span class="visually-hidden">Календарь</span>
+          </button>
         </li>
         <li class="available-time__item">
           <div class="available-time__item-wrapper">
             <div class="available-time__item-text">
               <p class="available-time__item-time">15.00 - 18.00</p>
               <p class="available-time__item-price">1500₽</p>
-              <p class="available-time__item-place">Осталось - 1 место</p>
+              <p class="available-time__item-place">Осталось &#8212; 1 место</p>
             </div>
             <button class="available-time__item-button">Выбрать</button>
           </div>
@@ -142,24 +239,34 @@
             <div class="available-time__item-text">
               <p class="available-time__item-time">19.00 - 22.00</p>
               <p class="available-time__item-price">1500₽</p>
-              <p class="available-time__item-place">Осталось - 1 место</p>
+              <p class="available-time__item-place">Осталось &#8212; 1 место</p>
             </div>
             <button class="available-time__item-button">Выбрать</button>
           </div>
         </li>
         <li class="available-time__item available-time__item--rating">
-          <div class="available-time__item-rating">
-            <img class="available-time__icon-cup" src="img/icon-cup.svg" alt="login">
-            <div class="available-time__stars">
-              <p class="available-time__stars-text">Более 50 отзывов с оценкой</p>
-              <div class="available-time__stars-group">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="login">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="login">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="login">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="login">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="login">
-              </div>
-            </div>
+          <picture>
+            <img class="available-time__icon-cup" src="img/icon-chat@1x.png" srcset="img/icon-cup@1x.png 1x, img/icon-cup@2x.png 2x" alt="cup">
+          </picture>
+          <div class="available-time__stars">
+            <p class="available-time__stars-text">Более 50 отзывов с оценкой</p>
+            <ul class="available-time__stars-group">
+              <li class="available-time__icon-star">
+                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+              </li>
+              <li class="available-time__icon-star">
+                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+              </li>
+              <li class="available-time__icon-star">
+                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+              </li>
+              <li class="available-time__icon-star">
+                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+              </li>
+              <li class="available-time__icon-star">
+                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+              </li>
+            </ul>
           </div>
         </li>
       </ul>
@@ -199,9 +306,12 @@
             <button class="map__info-button-toggle"></button>
           </div>
           <div class="map__info-item map__info-item--person">
-            <img class="map__info-person-image" src="img/person-photograph@1x.png" width="67" height="67" alt="login">
+            <picture>
+              <source type="image/webp" srcset="img/photo-photograph@1x.webp 1x, img/photo-photograph@2x.webp 2x">
+              <img class="map__info-person-image" src="img/photo-photograph@1x.png" srcset="img/photo-photograph@1x.png 1x, img/photo-photograph@2x.png 2x" alt="photograph" width="67" height="67">
+            </picture>
             <div class="map__info-text-column">
-              <p class="map__info-person-name">Марина Иванова</p>
+              <p class="map__info-person-name">Мария Иванова</p>
               <p class="map__info-person-profession">Фотограф</p>
               <button class="map__info-person-button">Показать больше информации о фотографе</button>
             </div>
@@ -209,128 +319,210 @@
         </div>
       </div>
     </section>
-   <section class="comment">
-        <div class="comment__column">
-          <h1 class="comment__header">Отзывы:</h1>
-          <ul class="comment__list">
-            <li class="comment__item">
-            
-              <img class="comment__item-image comment__item-image--desktop" src="img/photo-art-director@1x.png" alt="login">
-              <div class="comment__item-column">
-                <img class="comment__item-image comment__item-image--mobile" src="img/photo-art-director@1x.png" alt="login">
-                <div class="comment__user-data">
-                  <p class="comment__item-person-name">Валерия Антонова</p>
-                  <p class="comment__item-person-profession">Арт-директор</p>
-                  <div class="comment__item-stars-short">
-                    <div class="comment__item-stars">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                    </div>
-                  
-                    <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  </div>
-                </div>
-                
-                <div class="comment__item-text-block">
-                  <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  <p class="comment__item-text">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно.
-                    Фотки получились великолепные, отдельное спасибо фотографу!</p>
-                  <p class="comment__item-date">27 апреля, 2019г.</p>
+    <section class="comment">
+      <div class="comment__column">
+        <h1 class="comment__header">Отзывы:</h1>
+        <ul class="comment__list">
+          <li class="comment__item">
+            <picture>
+              <source type="image/webp" srcset="img/photo-art-director@1x.webp 1x, img/photo-art-director@2x.webp 2x">
+              <img class="comment__item-image comment__item-image--desktop" src="img/photo-art-director@1x.png" srcset="img/photo-art-director@1x.png 1x, img/photo-art-director@2x.png 2x" alt="art-director">
+            </picture>
+            <div class="comment__item-column">
+              <picture>
+                <source type="image/webp" srcset="img/photo-art-director@1x.webp 1x, img/photo-art-director@2x.webp 2x">
+                <img class="comment__item-image comment__item-image--mobile" src="img/photo-art-director@1x.png" srcset="img/photo-art-director@1x.png 1x, img/photo-art-director@2x.png 2x" alt="art-director">
+              </picture>
+              <div class="comment__user-data">
+                <p class="comment__item-person-name">Валерия Антонова</p>
+                <p class="comment__item-person-profession">Арт-директор</p>
+                <div class="comment__item-stars-short">
+                  <ul class="comment__item__stars">
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
                 </div>
               </div>
-            </li>
-            <li class="comment__item">
-              <img class="comment__item-image comment__item-image--desktop" src="img/photo-photograph-vitaliy@1x.png" alt="login">
-              <div class="comment__item-column">
-                <img class="comment__item-image comment__item-image--mobile" src="img/photo-photograph-vitaliy@1x.png" alt="login">
-                <div class="comment__user-data">
-                  <p class="comment__item-person-name">Виталий Петров</p>
-                  <p class="comment__item-person-profession">Фотограф</p>
-                  <div class="comment__item-stars-short">
-                    <div class="comment__item-stars">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                    </div>
-                    <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  </div>
+              <div class="comment__item-text-block">
+                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <p class="comment__item-text">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно.
+                  Фотки получились великолепные, отдельное спасибо фотографу!</p>
+                <p class="comment__item-date">27 апреля, 2019г.</p>
+              </div>
+            </div>
+          </li>
+          <li class="comment__item">
+            <picture>
+              <source type="image/webp" srcset="img/photo-photograph-vitaliy@1x.webp 1x, img/photo-photograph-vitaliy@2x.webp 2x">
+              <img class="comment__item-image comment__item-image--desktop" src="img/photo-photograph-vitaliy@1x.png" srcset="img/photo-photograph-vitaliy@1x.png 1x, img/photo-photograph-vitaliy@2x.png 2x" alt="photograph-vitaliy">
+            </picture>
+            <div class="comment__item-column">
+              <picture>
+                <source type="image/webp" srcset="img/photo-photograph-vitaliy@1x.webp 1x, img/photo-photograph-vitaliy@2x.webp 2x">
+                <img class="comment__item-image comment__item-image--mobile" src="img/photo-photograph-vitaliy@1x.png" srcset="img/photo-photograph-vitaliy@1x.png 1x, img/photo-photograph-vitaliy@2x.png 2x" alt="photograph-vitaliy">
+              </picture>
+              <div class="comment__user-data">
+                <p class="comment__item-person-name">Виталий Петров</p>
+                <p class="comment__item-person-profession">Фотограф</p>
+                <div class="comment__item-stars-short">
+                  <ul class="comment__item__stars">
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
                 </div>
-                <div class="comment__item-text-block">
-                  <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  <p class="comment__item-text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :)
+              </div>
+              <div class="comment__item-text-block">
+                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <p class="comment__item-text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :)
                   Впечатлило всё: сам вертолет, взлет, полёт, приземление. <br>Организация полёта отличная. Спасибо!</p>
-                  <p class="comment__item-date">19 апреля, 2019г.</p>
+                <p class="comment__item-date">19 апреля, 2019г.</p>
+              </div>
+          </div>
+          </li>
+          <li class="comment__item">
+            <picture>
+              <source type="image/webp" srcset="img/photo-dzim-kerri@1x.webp 1x, img/photo-dzim-kerri@2x.webp 2x">
+              <img class="comment__item-image comment__item-image--desktop" src="img/photo-dzim-kerri@1x.png" srcset="img/photo-dzim-kerri@1x.png 1x, img/photo-dzim-kerri@2x.png 2x" alt="photo-dzim-kerri">
+            </picture>
+            <div class="comment__item-column">
+              <picture>
+                <img class="comment__item-image comment__item-image--mobile" src="img/photo-dzim-kerri@1x.png" srcset="img/photo-dzim-kerri@1x.png 1x, img/photo-dzim-kerri@2x.png 2x" alt="photo-dzim-kerri">
+              </picture>
+              <div class="comment__user-data">
+                <p class="comment__item-person-name">Джим Керри</p>
+                <p class="comment__item-person-profession"></p>
+                <div class="comment__item-stars-short">
+                  <ul class="comment__item__stars">
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="comment__item-icon-star">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
                 </div>
               </div>
-            </li>
-            <li class="comment__item">
-              <img class="comment__item-image comment__item-image--desktop" src="img/photo-dzim-kerri@1x.png" alt="login">
-              <div class="comment__item-column">
-                <img class="comment__item-image comment__item-image--mobile" src="img/photo-dzim-kerri@1x.png" alt="login">
-                <div class="comment__user-data">
-                  <p class="comment__item-person-name">Джим Керри</p>
-                  <div class="comment__item-stars-short">
-                    <div class="comment__item-stars">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                      <img class="comment__item-icon-star" src="img/icon-star.svg" alt="login">
-                    </div>
-                    <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  </div>
-                </div>
-                <div class="comment__item-text-block">
-                  <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
-                  <p class="comment__item-text">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и сытными))
-                    Мы с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) 
-                    А еще нам всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно. 
-                    Короче, Презентстар – проверено. Оценка: пять!</p>
-                  <p class="comment__item-date">11 апреля, 2019г.</p>
-                </div>
+              <div class="comment__item-text-block">
+                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <p class="comment__item-text">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и сытными))
+                  Мы с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!))
+                  А еще нам всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно.
+                  Короче, Презентстар – проверено. Оценка: пять!</p>
+                <p class="comment__item-date">11 апреля, 2019г.</p>
               </div>
-            </li>
-          </ul>
-        </div>
-        <button class="comment__button">Показать все (134)</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="comment__button">Показать все (134)</button>
     </section>
   </main>
-  <!--<!--   <footer class="footer">
+  <footer class="footer">
     <section class="logo-social">
-      <a href="#" class="logo-social__logo">
-        <img class="logo-social__logo-icon" width="128" height="23" src="img/icon-logo.svg" alt="suka">
-      </a>
-      <div class="logo-social__list">
-        <ul class="logo-social__social-list">
-          <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-vk.svg" width="25" height="15" alt="login"></a></li>
-          <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-facebook.svg" width="25" height="15" alt="login"></a></li>
-          <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-instagram.svg" width="25" height="15" alt="login"></a></li>
-        </ul>
-        <select class="logo-social__language">
-          <option>ru</option>
-          <option>eng</option>
-        </select>
+      <div class="logo-social__wrapper">
+        <a href="#" class="logo-social__logo">
+          <img class="logo-social__logo-icon" width="128" height="23" src="img/icon-logo.svg" alt="suka">
+        </a>
+        <div class="logo-social__list">
+          <ul class="logo-social__social-list">
+            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-vk.svg" width="25" height="15" alt="login"></a></li>
+            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-facebook.svg" width="25" height="15" alt="login"></a></li>
+            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-instagram.svg" width="25" height="15" alt="login"></a></li>
+          </ul>
+          <select class="logo-social__language logo-social__language--desktop">
+            <option>ru</option>
+            <option>eng</option>
+          </select>
+        </div>
       </div>
-    </section>-->
-  <section class="payment-copyright">
+    </section>
+    <section class="payment-copyright">
       <div class="payment-copyright__wrapper">
         <div class="payment-copyright__column">
           <ul class="payment-copyright__payment-list">
             <li class="payment-copyright__payment-item"><img class="logo-social__social-image" src="img/icon-master-card.svg" width="39" height="25" alt="login"></li>
             <li class="payment-copyright__payment-item"><img class="logo-social__social-image" src="img/icon-visa-card.svg" width="39" height="27" alt="login"></li>
           </ul>
+          <select class="payment-copyright__language payment-copyright__language--mobile">
+            <option>ru</option>
+            <option>eng</option>
+          </select>
           <div class="payment-copyright__copyright">
             <p class="payment-copyright__copyright-text">Тех. поддержка: 8(800)700-00-00</p>
             <p class="payment-copyright__copyright-text">© 2018 HELYFLY. All Rights Reserved.</p>
           </div>
         </div>
       </div>
-    </section>
-  
+    </section><!---->
+  </footer>
+  <script src="js/photos.js"></script>
 </body>
 </html>

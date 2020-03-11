@@ -1,62 +1,54 @@
 .map {
   margin-bottom: 130px;
-  
-  padding-top: 10px;
   background-size: center;
-  min-height:100%;
+  min-height: 100%;
   position: relative;
-  
 }
 
 .map__image {
+  @include background;
   width: 100%;
-  height: 505px;
-  background-image: url("../img/map@1x.png");
   height: 500px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  
+  background-image: url("../img/map@1x.png");
 }
 
 .map__info {
   @include page-width;
-  
 }
 
 .map__info-button,
 .map__info-button-toggle {
   display: none;
-} 
+}
 
 .map__info-column {
   margin-top: 10px;
   background-color: $white-color;
-  padding: 50px 30px 15px 30px;
+  padding: 55px 30px 15px 30px;
   height: 80%;
-  width: 340px;
-  align-items: bottom;
-  
+  width: 360px;
   position: absolute;
-  top: 20px;
+  top: 5px;
   z-index: 10;
 }
 
 .map__info-list {
-@include cancel-list;
-
+  @include cancel-list;
+  margin-bottom: 35px;
 }
 
 .map__info-item {
   @include flex-row;
-  margin-bottom: 24px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-.map__info-number{
+.map__info-number {
   font-family: $montserrat-bold;
   font-weight: bold;
   font-size: 35px;
   line-height: 51px;
- // padding: 50%;
   width: 60px;
   height: 56px;
   margin-right: 21px;
@@ -66,29 +58,13 @@
   text-align: center;
 }
 
-.map__info-person-image {
-  margin-right: 10px;
-}
-
-.map__info-header{
+.map__info-header {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 5px;
-
   color: $black-color;
-}
-
-.map__info-person-name {
-  font-weight: 500;
-  margin-bottom: 6px;
-  font-size: 17px;
-}
-
-
-.map__info-item--person .map__info-column {
-  padding-top: 10px;
 }
 
 .map__info-text {
@@ -98,178 +74,190 @@
   color: $black-color;
 }
 
+.map__info-item--person .map__info-column {
+  padding-top: 10px;
+}
+
+.map__info-person-image {
+  margin-right: 10px;
+}
+
+.map__info-person-name {
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
 .map__info-person-profession {
   font-size: 16px;
-  line-height: 25px;
+  line-height: 21px;
   font-weight: normal;
   color: $black-color;
 }
 
 .map__info-person-button {
   @include blue-color-button;
-  font-size: 14px;
-}
-
-.map__info-item--person {
-  margin-top: 10px;
+  font-size: 11px;
 }
 
 @media (max-width: $tablet-width) {
   .map {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
   }
 }
 
 @media (max-width: $mobile-width) {
-.map {
-  margin-bottom: 38px;
-}
-  .map__image {
-  background-image: url("../img/map-mobile@1x.png");
-  width: 100%;
-  background-size: cover;
-  margin-bottom: 50px;
-  height: 425px;
+  .map {
+    margin-bottom: 40px;
   }
-  
-  .map__info-header{
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 27px;
-  margin-bottom: 5px;
 
-  color: $black-color;
-}
+  .map__image {
+    background-image: url("../img/map-mobile@1x.png");
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 50px;
+    height: 425px;
+  }
 
-.map__info-person-name {
-  font-weight: 500;
-  margin-bottom: 3px;
-  font-size: 15px;
-}
-
-.map__info-text {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: normal;
-  color: $black-color;
-}
-  
   .map__info {
     position: relative;
     border: 1px solid $grey-color;
     width: 85%;
   }
 
+  .map__info-button {
+    display: block;
+    position: absolute;
+  }
+
+  .map__button--previous {
+    width: 10px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 80px;
+    left: 27px;
+    background-image: url("../img/icon-arrow-left.svg");
+  }
+
+  .map__button--next {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    top: 80px;
+    right: 15px;
+    background-image: url("../img/icon-arrow-right.svg");
+  }
+
   .map__info-column {
-   @include page-width;
+    @include page-width;
     width: 78%;
     position: static;
-    
+    text-align: center;
+    padding-top: 50px;
   }
-  
-  .map__info-button {
-  display: block;
-  position: absolute;
-} 
 
-.map__info-button-toggle {
-  display: block;
-} 
+  .map__info-list {
+    margin-bottom: 0;
+  }
 
-  
   .map__info-item {
-  @include flex-column;
-  margin-bottom: 21px;
-  text-align: center;
-}
+    display: none;
+  }
 
-.map__info-number{
-  margin-bottom: 13px;
-  margin-right: 0;
-}
+  .map__info-item--active,
+  .map__info-item--person {
+    @include flex-column;
+    margin-bottom: 21px;
+    align-items: center;
+  }
 
-.map__button--previous {
-  width: 10px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 80px;
-  left: 27px;
-  background-image: url("../img/icon-arrow-left.svg");
-}
+  .map__info-number {
+    margin-right: 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 13px;
+  }
 
-.map__info-item--person {
-  @include flex-row;
-  text-align: left;
-  align-items: flex-start;
-  margin-bottom: 0;
-  margin-top: 0;
-}
+  .map__info-text-column {
+    text-align: center;
+  }
 
-.map__info-number{
-padding: 10px;
-  width: 50px;
-  height: 50px;margin-bottom: 13px;
-}
+  .map__info-header {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    margin-bottom: 5px;
+    color: $black-color;
+  }
 
-.map__info-person-button {
-  text-align: left;
-  line-height: 22px;
-}
+  .map__info-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $black-color;
+  }
 
-.map__button--next {
-position: absolute;
-  width: 10px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  top: 80px;
-  right: 15px;
-  background-image: url("../img/icon-arrow-right.svg");
-}
+  .map__info-buttons-toggles {
+    @include flex-row;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 
-.map__info-person-profession {
-  font-size: 14px;
-  line-height: 25px;
-  font-weight: normal;
-  color: $black-color;
-}
+  .map__info-button-toggle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/icon-toggle.svg");
+    margin-right: 10px;
 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
-.map__info-buttons-toggles {
-  background-color: transparent;
-  border: none;
-  margin: 0 auto;
-  @include flex-row;
-  justify-content: center;
-  margin-bottom: 40px;
-}
+  .map__info-button-toggle--active {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/icon-toggle-active.svg");
+  }
 
-.map__info-item {
-  display: none;
-}
+  .map__info-item--person {
+    @include flex-row;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 
-.map__info-item--active,
-.map__info-item--person {
-  display: flex;
-}
+  .map__info-item--person .map__info-text-column {
+    text-align: left;
+  }
 
-.map__info-button-toggle {
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border: none;
-  background-image: url("../img/icon-toggle.svg");
-  margin-right: 10px;
-}
+  .map__info-person-name {
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-size: 16px;
+  }
 
-.map__info-button-toggle--active {
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border: none;
-  background-image: url("../img/icon-toggle-active.svg");
-}
+  .map__info-person-profession {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: normal;
+    color: $black-color;
+  }
+
+  .map__info-person-button {
+    text-align: left;
+    line-height: 21px;
+    font-size: 16px;
+  }
 }

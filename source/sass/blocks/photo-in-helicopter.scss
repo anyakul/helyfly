@@ -15,10 +15,13 @@
 }
 
 .photo-in-helicopter__header {
-  font-size: 42px;
-  color: $black-color;
+  @include big-black-title;
   margin-bottom: 7px;
-  line-height: 48px;
+}
+
+.photo-in-helicopter__image {
+  width: 554px;
+  height: 373px;
 }
 
 .photo-in-helicopter__image--mobile {
@@ -26,9 +29,7 @@
 }
 
 .photo-in-helicopter__text {
-  font-size: 18px;
-  line-height: 28px;
-  color: $black-color;
+  @include section-header;
   margin-bottom: 17px;
 }
 
@@ -40,39 +41,22 @@
 .photo-in-helicopter__item {
   @include flex-row;
   font-size: 14px;
-  margin-bottom: 16px;
-
-  &:first-child .photo-in-helicopter__icon {
-    margin-right: 15px;
-  }
-}
-
-.photo-in-helicopter__item--language {
-  display: none;
-}
-
-.photo-in-helicopter__item--price {
-  display: none;
+  margin-bottom: 13px;
 }
 
 .photo-in-helicopter__icon {
   height: 32px;
+  width: 35px;
   margin-right: 10px;
 }
 
 .photo-in-helicopter__item-rating {
   @include flex-row;
-  border-top: 1px solid $grey-color;
-  border-bottom: 1px solid $grey-color;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  border-top: $grey-border;
+  border-bottom: $grey-border;
+  padding: 25px 0;
   width: 50%;
   font-size: 18px;
-  
-}
-
-.photo-in-helicopter__icon-cup {
-  margin-right: 10px;
 }
 
 .photo-in-helicopter__stars {
@@ -80,29 +64,22 @@
   align-items: left;
 }
 
-.photo-in-helicopter__icon-star {
-  margin-left: 9px;
+.photo-in-helicopter__stars-group {
+  @include stars-group;
 }
 
-.photo-in-helicopter__image {
-  width: 554px;
-  height: 373px;
+.photo-in-helicopter__icon-star {
+  @include icon-star;
+}
+
+.photo-in-helicopter__icon-star svg {
+  color: $orange-color;
 }
 
 @media (max-width: $tablet-width) {
   .photo-in-helicopter__wrapper {
     @include flex-column;
-    margin-bottom: 17px;
   }
-  
-  .photo-in-helicopter__image--mobile {
-    display: block;
-  }
-
-  .photo-in-helicopter__image--desktop {
-    display: none;
-  }
-
 
   .photo-in-helicopter__column {
     width: 100%;
@@ -116,32 +93,6 @@
     text-align: center;
     margin-bottom: 12px;
   }
-  
-  
-  .photo-in-helicopter__text {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 34px;
-  }
-
-  .photo-in-helicopter__icon {
-    height: 31px;
-    margin-right: 10px;
-  }
-
-  .photo-in-helicopter__item--price .photo-in-helicopter__icon {
-    height: 20px;
-  }
-
-  .photo-in-helicopter__item-rating {
-    width: 100%;
-    font-size: 18px;
-    
-  }
-
-  .photo-in-helicopter__icon-star {
-    margin-left: 9px;
-  }
 
   .photo-in-helicopter__image {
     width: 290px;
@@ -149,59 +100,62 @@
     margin: 0 auto;
     margin-bottom: 30px;
   }
-}
-@media (max-width: $mobile-width) {
 
-.photo-in-helicopter {
-    margin-bottom: 61px;
+  .photo-in-helicopter__image--mobile {
+    display: block;
   }
-  
-  .photo-in-helicopter__item--language {
-    display: flex;
+
+  .photo-in-helicopter__image--desktop {
+    display: none;
   }
-  
+
+  .photo-in-helicopter__text {
+    margin-bottom: 34px;
+    line-height: 21px;
+  }
+
+  .photo-in-helicopter__icon {
+    height: 31px;
+    width: 30px;
+  }
+
+  .photo-in-helicopter__item-rating {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .photo-in-helicopter {
+    margin-bottom: 80px;
+  }
+
+  .photo-in-helicopter__wrapper {
+    margin-bottom: 10px;
+  }
+
   .photo-in-helicopter__header br {
     display: block;
   }
 
-  
-  .photo-in-helicopter__wrapper {
-    margin-bottom: 10px;
-  }
-  
-  .photo-in-helicopter__item--price {
-  display: flex;
-}
-
-.photo-in-helicopter__stars {
-  @include flex-column;
-}
   .photo-in-helicopter__item {
     @include flex-row;
     font-size: 14px;
     margin-bottom: 15px;
   }
-  
+
   .photo-in-helicopter__item-rating {
     font-size: 14px;
     padding: 13px 0;
     letter-spacing: 0.3px;
   }
-  
-  .photo-in-helicopter__icon-cup {
-    width: 38px;
-    margin-right: 9px;
+
+  .photo-in-helicopter__stars {
+    @include flex-column;
   }
 
-  .photo-in-helicopter__item--question {
-    display: none;
-  }
-
-  .photo-in-helicopter__item--photos {
-    order: 2;
-  }
-  
-  .photo-in-helicopter__icon-star {
-    margin-left: 0;
+  .photo-in-helicopter__icon--cup {
+    width: 36px;
+    height: 40px;
   }
 }

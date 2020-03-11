@@ -33,7 +33,6 @@
   display: none;
 }
 
-
 @media (max-width: $tablet-width) {
   .header {
     margin-top: 20px;
@@ -77,9 +76,5 @@
   .header__logo-icon {
     width: 85px;
     height: 15px;
-  }
-
-  .header__phone {
-    display: none;
   }
 }

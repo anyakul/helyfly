@@ -1,9 +1,14 @@
 .logo-social {
-@include page-width;
-  @include flex-row-space;
-  width: 1009px;
-  margin: 0 24%;
+  @include page-width;
+  width: 71%;
+  margin: 0 auto;
   margin-bottom: 40px;
+}
+
+.logo-social__wrapper {
+  @include flex-row-space;
+  width: 88%;
+  margin-left: 6%;
 }
 
 .logo-social__list {
@@ -20,19 +25,7 @@
 }
 
 .logo-social__language {
-  background-color: transparent;
-  border: 0 none;
- // color: $white-color;
-  appearance: none;
-  background-image: url("../img/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: 33px 5px;
-  width: 45px;
-  font-family: $montserrat-regular;
-  font-size: 15px;
-  line-height: 18px;
-  color: #37373F;
-  text-transform: uppercase;
+  @include select;
 }
 /*
 .login__language-select option {
@@ -42,3 +35,28 @@
   appearance: none;
 }
 */
+
+@media (max-width: $tablet-width) {
+  .logo-social {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: $grey-border;
+  }
+
+  .logo-social__language--desktop {
+    display: none;
+  }
+
+  .logo-social__wrapper {
+    @include page-width;
+  }
+
+  .logo-social__social-item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

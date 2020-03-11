@@ -1,22 +1,18 @@
 .payment-copyright {
   background-color: $light-yellow-color;
-  padding-bottom: 40px;
-  padding-top: 10px;
+  padding-bottom: 27px;
+  padding-top: 3px;
 }
 
 .payment-copyright__wrapper {
   @include page-width;
+  @include flex-row-space;
 }
 
 .payment-copyright__column {
   @include flex-row-space;
-  width: 50%;
+  width: 55%;
   margin-left: 6%;
-}
-
-.payment-copyright__wrapper {
-  @include page-width;
-  @include flex-row-space;
 }
 
 .payment-copyright__payment-list {
@@ -33,9 +29,85 @@
 }
 
 .payment-copyright__copyright-text {
-  font-family: Montserrat;
   font-size: 14px;
-  line-height: 17px;
-
+  line-height: 24px;
   color: $light-grey-color;
+}
+
+.payment-copyright__language {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .payment-copyright__wrapper {
+    @include page-width;
+    @include flex-row-space;
+  }
+
+  .payment-copyright__column {
+    @include flex-row-space;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .payment-copyright__payment-list {
+    @include cancel-list;
+    @include flex-row-space;
+  }
+
+  .payment-copyright__payment-item {
+    margin-right: 20px;
+  }
+
+  .payment-copyright__copyright {
+    text-align: center;
+  }
+
+  .payment-copyright__copyright-text {
+    font-size: 14px;
+    line-height: 24px;
+
+    color: $light-grey-color;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .payment-copyright {
+    background-color: $white-color;
+    padding-bottom: 27px;
+    padding-top: 3px;
+  }
+
+  .payment-copyright__column {
+    @include flex-row-space-wrap;
+    width: 100%;
+    margin-left: 6%;
+  }
+
+  .payment-copyright__language {
+    @include select;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .payment-copyright__payment-list {
+    @include cancel-list;
+    @include flex-row-space;
+    margin-bottom: 30px;
+  }
+
+  .payment-copyright__payment-item {
+    margin-right: 20px;
+  }
+
+  .payment-copyright__copyright {
+    text-align: center;
+  }
+
+  .payment-copyright__copyright-text {
+    font-size: 14px;
+    line-height: 24px;
+
+    color: $light-grey-color;
+  }
 }
