@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Helyfly</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
   <!-- <style>
     HTML {
     opacity: 0.5;
@@ -26,6 +27,7 @@
 <body>
   <header class="header">
     <section class="header__wrapper">
+     <h2 class="visually-hidden">Логотип и инфа</h2>
       <a href="#" class="header__logo">
         <img class="header__logo-icon" src="img/icon-logo.svg" alt="helyfly">
       </a>
@@ -35,14 +37,19 @@
       </p>
       <p class="header__city">Москва</p>
       <a class="header__avatar" href="#">
-        <img class="header__icon" src="img/icon-login.svg" alt="login">
+        <picture>
+          <img class="header__icon" src="img/icon-login@1x.png" srcset="img/icon-login@1x.png 1x, img/icon-login@2x.png 2x" alt="login">
+        </picture>
       </a>
     </section>
   </header>
   <main class="main">
     <section class="promo">
       <div class="promo__wrapper">
-        <h1 class="promo__header">Эксклюзивная <span class="promo__span">фотосессия</span> при полете на вертолете</h1>
+        <h1 class="promo__header">Эксклюзивная 
+          <span class="promo__span">фотосессия</span>
+          при полете на вертолете
+        </h1>
         <div class="promo__price">
           <p class="promo__price-header">Стоимость:</p>
           <p class="promo__price-number">1500₽</p>
@@ -53,7 +60,7 @@
     <section class="photo-in-helicopter">
       <div class="photo-in-helicopter__wrapper">
         <div class="photo-in-helicopter__column">
-          <h1 class="photo-in-helicopter__header">Фотосессия<br> в вертолете</h1>
+          <h2 class="photo-in-helicopter__header">Фотосессия<br> в вертолете</h2>
           <picture>
             <source type="image/webp" srcset="img/photo-in-helicopter@1x.webp 1x, img/photo-in-helicopter@2x.webp 2x">
             <img class="photo-in-helicopter__image photo-in-helicopter__image--mobile" src="img/photo-in-helicopter@1x.png" srcset="img/photo-in-helicopter@1x.png 1x, img/photo-in-helicopter@2x.png 2x" alt="photo-in-helicopter">
@@ -220,7 +227,9 @@
         <li class="available-time__item available-time__item--date">
           <span class="available-time__item-time-text">Пятница, 14 сентября</span>
           <button class="available-time__button-calender">
-            <img class="available-time__icon" src="img/icon-calender.svg" alt="calender">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite.svg#icon-calendar"></use>
+            </svg>
             <span class="visually-hidden">Календарь</span>
           </button>
         </li>
@@ -252,19 +261,29 @@
             <p class="available-time__stars-text">Более 50 отзывов с оценкой</p>
             <ul class="available-time__stars-group">
               <li class="available-time__icon-star">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
               </li>
               <li class="available-time__icon-star">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
               </li>
               <li class="available-time__icon-star">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
               </li>
               <li class="available-time__icon-star">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
               </li>
               <li class="available-time__icon-star">
-                <img class="available-time__icon-star" src="img/icon-star.svg" alt="star">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
               </li>
             </ul>
           </div>
@@ -272,10 +291,15 @@
       </ul>
     </section>
     <section class="map">
+      <h2 class="visually-hidden">Карта</h2>
       <div class="map__image"></div>
       <div class="map__info">
-        <button class="map__info-button map__button--previous"><span class="visually-hidden">Читать еще</span></button>
-        <button class="map__info-button map__button--next"><span class="visually-hidden">Следующий</span></button>
+        <button class="map__info-button map__button--previous">
+          <span class="visually-hidden">Читать еще</span>
+        </button>
+        <button class="map__info-button map__button--next">
+          <span class="visually-hidden">Следующий</span>
+        </button>
         <div class="map__info-column">
           <ul class="map__info-list">
             <li class="map__info-item map__info-item--active">
@@ -364,11 +388,21 @@
                       </svg>
                     </li>
                   </ul>
-                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                  <span class="comment__item-short comment__item-short--desktop">
+                    <svg width="17" height="15">
+                      <use xlink:href="img/sprite.svg#icon-tick"></use>
+                    </svg>
+                    Супер! Я бы заказала съемку снова!
+                  </span>
                 </div>
               </div>
               <div class="comment__item-text-block">
-                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <span class="comment__item-short comment__item-short--mobile">
+                  <svg width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                  Супер! Я бы заказал съемку снова!
+                </span>
                 <p class="comment__item-text">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно.
                   Фотки получились великолепные, отдельное спасибо фотографу!</p>
                 <p class="comment__item-date">27 апреля, 2019г.</p>
@@ -416,11 +450,21 @@
                       </svg>
                     </li>
                   </ul>
-                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                  <span class="comment__item-short comment__item-short--desktop">
+                    <svg width="17" height="15">
+                      <use xlink:href="img/sprite.svg#icon-tick"></use>
+                    </svg>
+                    Супер! Я бы заказал съемку снова!
+                  </span>
                 </div>
               </div>
               <div class="comment__item-text-block">
-                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <span class="comment__item-short comment__item-short--mobile">
+                  <svg width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                  Супер! Я бы заказал съемку снова!
+                </span>
                 <p class="comment__item-text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :)
                   Впечатлило всё: сам вертолет, взлет, полёт, приземление. <br>Организация полёта отличная. Спасибо!</p>
                 <p class="comment__item-date">19 апреля, 2019г.</p>
@@ -467,11 +511,21 @@
                       </svg>
                     </li>
                   </ul>
-                  <span class="comment__item-short comment__item-short--desktop"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                  <span class="comment__item-short comment__item-short--desktop">
+                    <svg width="17" height="15">
+                      <use xlink:href="img/sprite.svg#icon-tick"></use>
+                    </svg>
+                    Супер! Я бы заказал съемку снова!
+                  </span>
                 </div>
               </div>
               <div class="comment__item-text-block">
-                <span class="comment__item-short comment__item-short--mobile"><img class="comment__item-icon-tick" src="img/icon-tick.svg" alt="login">Супер! Я бы заказала съемку снова!</span>
+                <span class="comment__item-short comment__item-short--mobile">
+                  <svg width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                  Супер! Я бы заказал съемку снова!
+                </span>
                 <p class="comment__item-text">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и сытными))
                   Мы с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!))
                   А еще нам всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно.
@@ -487,17 +541,36 @@
   </main>
   <footer class="footer">
     <section class="logo-social">
+      <h2 class="visually-hidden">Логотип и соцсети футер</h2>
       <div class="logo-social__wrapper">
         <a href="#" class="logo-social__logo">
-          <img class="logo-social__logo-icon" width="128" height="23" src="img/icon-logo.svg" alt="suka">
+          <img class="logo-social__logo-icon" width="128" height="23" src="img/icon-logo.svg" alt="helyfly">
         </a>
         <div class="logo-social__list">
           <ul class="logo-social__social-list">
-            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-vk.svg" width="25" height="15" alt="login"></a></li>
-            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-facebook.svg" width="25" height="15" alt="login"></a></li>
-            <li class="logo-social__social-item"><a class="logo-social__social-link" href="#"><img class="logo-social__social-image" src="img/icon-instagram.svg" width="25" height="15" alt="login"></a></li>
+            <li class="logo-social__social-item">
+              <a class="logo-social__social-link" href="#" aria-label="vk">
+                <svg width="26" height="16">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="logo-social__social-item">
+              <a class="logo-social__social-link" href="#" aria-label="facebook">
+                <svg width="27" height="26">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="logo-social__social-item">
+              <a class="logo-social__social-link" href="#" aria-label="instagram">
+                <svg width="26" height="26">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
-          <select class="logo-social__language logo-social__language--desktop">
+          <select class="logo-social__language logo-social__language--desktop" aria-label="choose-language">
             <option>ru</option>
             <option>eng</option>
           </select>
@@ -505,13 +578,22 @@
       </div>
     </section>
     <section class="payment-copyright">
+      <h2 class="visually-hidden">Оплата и копирайт</h2>
       <div class="payment-copyright__wrapper">
         <div class="payment-copyright__column">
           <ul class="payment-copyright__payment-list">
-            <li class="payment-copyright__payment-item"><img class="logo-social__social-image" src="img/icon-master-card.svg" width="39" height="25" alt="login"></li>
-            <li class="payment-copyright__payment-item"><img class="logo-social__social-image" src="img/icon-visa-card.svg" width="39" height="27" alt="login"></li>
+            <li class="payment-copyright__payment-item">
+              <a class="lpayment-copyright__payment-link" href="#" aria-label="master-card">
+                <img class="logo-social__payment-image" src="img/icon-master-card.png" width="39" height="25" alt="master-card">
+              </a>
+            </li>
+            <li class="payment-copyright__payment-item">
+              <a class="lpayment-copyright__payment-link" href="#" aria-label="visa-card">
+                <img class="logo-social__payment-image" src="img/icon-visa-card.png" width="39" height="27" alt="visa-card">
+              </a>
+            </li>
           </ul>
-          <select class="payment-copyright__language payment-copyright__language--mobile">
+          <select class="payment-copyright__language payment-copyright__language--mobile" aria-label="choose-language">
             <option>ru</option>
             <option>eng</option>
           </select>
@@ -521,7 +603,7 @@
           </div>
         </div>
       </div>
-    </section><!---->
+    </section>
   </footer>
   <script src="js/photos.js"></script>
 </body>

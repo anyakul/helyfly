@@ -1,6 +1,8 @@
 .promo {
   @include background;
+  background-color: #57667b;
   background-image: url("../img/helimain@1x.png");
+  background-image: url("../img/helimain@1x.webp");
   padding-top: 286px;
   padding-bottom: 280px;
   margin-bottom: 65px;
@@ -8,6 +10,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/helimain@2x.png");
+    background-image: url("../img/helimain@2x.webp");
   }
 }
 
@@ -72,11 +75,12 @@
     padding-top: 138px;
     padding-bottom: 177px;
     margin-bottom: 37px;
-    background-position: 55% 0;
     background-image: url("../img/helimain-mobile@1x.png");
+    background-image: url("../img/helimain-mobile@1x.webp");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/helimain-mobile@2x.png");
+      background-image: url("../img/helimain-mobile@2x.webp");
     }
   }
 

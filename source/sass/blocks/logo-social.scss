@@ -27,14 +27,6 @@
 .logo-social__language {
   @include select;
 }
-/*
-.login__language-select option {
-  background-color: $light-purple-color;
-  border: 0 none;
-  color: $white-color;
-  appearance: none;
-}
-*/
 
 @media (max-width: $tablet-width) {
   .logo-social {

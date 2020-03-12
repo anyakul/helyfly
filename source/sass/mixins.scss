@@ -181,6 +181,10 @@
   @include flex-row;
   @include cancel-list;
   margin-left: 10px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
 }
 
 @mixin icon-star {

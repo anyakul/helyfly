@@ -40,6 +40,9 @@
 .available-time__button-calender {
   @include button;
   margin-left: 20px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
 }
 
 .available-time__item-wrapper {
@@ -104,6 +107,12 @@
 }
 
 @media (max-width: $tablet-width) {
+  .available-time__list {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
   .available-time {
     margin-bottom: 45px;
   }
