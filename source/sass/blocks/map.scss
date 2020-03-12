@@ -11,11 +11,9 @@
   height: 500px;
   background-color: $light-orange-color;
   background-image: url("../img/map@1x.png");
-  background-image: url("../img/map@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/map@2x.png");
-    background-image: url("../img/map@2x.webp");
   }
 }
 
@@ -120,7 +118,6 @@
 
   .map__image {
     background-image: url("../img/map-mobile@1x.png");
-    background-image: url("../img/map-mobile@1x.webp");
     width: 100%;
     background-size: cover;
     margin-bottom: 50px;
@@ -128,7 +125,6 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-mobile@2x.png");
-      background-image: url("../img/map-mobile@2x.webp");
     }
   }
 

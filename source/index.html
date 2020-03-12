@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Helyfly</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="prefetch" as="font" type="font/woff" href="fonts/Montserrat-Regular.woff" as="font">
   <!-- <style>
     HTML {
     opacity: 0.5;
@@ -27,7 +27,7 @@
 <body>
   <header class="header">
     <section class="header__wrapper">
-     <h2 class="visually-hidden">Логотип и инфа</h2>
+      <h2 class="visually-hidden">Логотип и инфа</h2>
       <a href="#" class="header__logo">
         <img class="header__logo-icon" src="img/icon-logo.svg" alt="helyfly">
       </a>
@@ -38,7 +38,7 @@
       <p class="header__city">Москва</p>
       <a class="header__avatar" href="#">
         <picture>
-          <img class="header__icon" src="img/icon-login@1x.png" srcset="img/icon-login@1x.png 1x, img/icon-login@2x.png 2x" alt="login">
+          <img class="header__icon" data-src="img/icon-login@1x.png" srcset="img/icon-login@1x.png 1x, img/icon-login@2x.png 2x" alt="login">
         </picture>
       </a>
     </section>
@@ -46,7 +46,7 @@
   <main class="main">
     <section class="promo">
       <div class="promo__wrapper">
-        <h1 class="promo__header">Эксклюзивная 
+        <h1 class="promo__header">Эксклюзивная
           <span class="promo__span">фотосессия</span>
           при полете на вертолете
         </h1>
@@ -294,13 +294,13 @@
       <h2 class="visually-hidden">Карта</h2>
       <div class="map__image"></div>
       <div class="map__info">
-        <button class="map__info-button map__button--previous">
-          <span class="visually-hidden">Читать еще</span>
-        </button>
-        <button class="map__info-button map__button--next">
-          <span class="visually-hidden">Следующий</span>
-        </button>
         <div class="map__info-column">
+          <button class="map__info-button map__button--previous">
+            <span class="visually-hidden">Читать еще</span>
+          </button>
+          <button class="map__info-button map__button--next">
+            <span class="visually-hidden">Следующий</span>
+          </button>
           <ul class="map__info-list">
             <li class="map__info-item map__info-item--active">
               <p class="map__info-number">1</p>
@@ -323,12 +323,12 @@
                 <p class="map__info-text">2 места</p>
               </div>
             </li>
+            <li class="map__info-buttons-toggles">
+              <button class="map__info-button-toggle map__info-button-toggle--active"></button>
+              <button class="map__info-button-toggle" onclick="minusSlide()"></button>
+              <button class="map__info-button-toggle" onclick="plusSlide()"></button>
+            </li>
           </ul>
-          <div class="map__info-buttons-toggles">
-            <button class="map__info-button-toggle map__info-button-toggle--active"></button>
-            <button class="map__info-button-toggle"></button>
-            <button class="map__info-button-toggle"></button>
-          </div>
           <div class="map__info-item map__info-item--person">
             <picture>
               <source type="image/webp" srcset="img/photo-photograph@1x.webp 1x, img/photo-photograph@2x.webp 2x">
@@ -583,12 +583,12 @@
         <div class="payment-copyright__column">
           <ul class="payment-copyright__payment-list">
             <li class="payment-copyright__payment-item">
-              <a class="lpayment-copyright__payment-link" href="#" aria-label="master-card">
+              <a class="payment-copyright__payment-link" href="#" aria-label="master-card">
                 <img class="logo-social__payment-image" src="img/icon-master-card.png" width="39" height="25" alt="master-card">
               </a>
             </li>
             <li class="payment-copyright__payment-item">
-              <a class="lpayment-copyright__payment-link" href="#" aria-label="visa-card">
+              <a class="payment-copyright__payment-link" href="#" aria-label="visa-card">
                 <img class="logo-social__payment-image" src="img/icon-visa-card.png" width="39" height="27" alt="visa-card">
               </a>
             </li>
@@ -605,6 +605,5 @@
       </div>
     </section>
   </footer>
-  <script src="js/photos.js"></script>
 </body>
 </html>

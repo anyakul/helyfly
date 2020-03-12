@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://anyakul.github.io/sitemap.xml
+Host: anyakul.github.io
